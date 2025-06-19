@@ -41,8 +41,8 @@ const Completed = () => {
 
 
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-semibold mb-6 text-center">✅ Completed Dashboard</h1>
+    <div className="p-6 bg-gray-900">
+      <h1 className="text-3xl text-white font-semibold mb-6 text-center">✅ Completed Dashboard</h1>
 
       <section className="mb-12">
         <h2 className="text-2xl font-semibold text-green-400 mb-4">Completed Tasks</h2>
