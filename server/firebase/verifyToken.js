@@ -1,7 +1,10 @@
 // firebase/verifyToken.js
 const admin = require("firebase-admin");
+require("dotenv").config();
 
-const serviceAccount = require("./firebase-admin.json"); 
+const path = process.env.FIREBASE_ADMIN_KEY_PATH;   // <— NEW
+if (!path) throw new Error("FIREBASE_ADMIN_KEY_PATH env var not set");
+const serviceAccount = require(path); 
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
